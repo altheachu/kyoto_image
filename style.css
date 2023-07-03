@@ -1,3 +1,21 @@
 .navigator ul li{
     display: inline;
 }
+
+.pic_size{
+    width: 200px;
+    height: auto;
+}
+
+.pic_size_horizon{
+    width: auto;
+    height: 305px; 
+}
+
+.layout_middle{
+    text-align: center;
+}
+
+.title{
+    color: #000;
+}
