@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <title>京都、夏天</title>
-    <link rel="stylesheet" href="./style.css"/>
+    <meta charset="UTF-8" http-equiv="refresh" content="60">
+    <title>京都｜夏天</title>
+    <link rel="stylesheet" href="../css/index_style.css"/>
+    <script type="text/javascript" src="../js/slide.js"></script>
 </head>
 <body>
-    <h1>京都印象 夏</h1>
-    <div class="navigator">
+    <header>
+        <span>
+            <div id="header_text_1">京 都</div>
+        </sapn>
+    </header>
+
+    <div class="navigator_lan">
         <ul>
             <li><a href="./index.html">英文版</a></li>
             <li><a href="./ch_index.html">中文版</a></li>
@@ -15,13 +21,49 @@
     </div>
     <div class="navigator">
         <ul>
-            <li><a href="./pages/ch/hydrangeas.html">紫陽花</a></li>
+            <li><a href="./pages/ch/hydrangeas.html">賞花</a></li>
             <li><a href="./pages/ch/heritage.html">古蹟</a></li>
             <li><a href="./pages/ch/food.html">食光</a></li>
-            <li><a href="./pages/ch/experience.html">文化體驗</a></li>
+            <li><a href="./pages/ch/experience.html">體驗</a></li>
         </ul>
     </div>
-    <img src="./images/family_128_modify.png" alt="family photo in Kyoto" height="250px"/>
+    <div class="slideshow">
+        <div class="slide__item fades">
+            <div class="slide__pagenumber">1 / 5</div>
+            <img class="slide_pic" src="./images/hydrangeas_01.JPG" />
+            <!-- <div class="slide__content">Hello page 1</div> -->
+        </div>
+        <div class="slide__item fades">
+            <div class="slide__pagenumber">2 / 5</div>
+            <img class="slide_pic" src="./images/hydrangeas_02.JPG" />
+            <!-- <div class="slide__content">Hello page 1</div> -->
+        </div>
+        <div class="slide__item fades">
+            <div class="slide__pagenumber">3 / 5</div>
+            <img class="slide_pic" src="./images/hydrangeas_03.JPG" />
+            <!-- <div class="slide__content">Hello page 1</div> -->
+        </div>
+        <div class="slide__item fades">
+            <div class="slide__pagenumber">4 / 5</div>
+            <img class="slide_pic" src="./images/hydrangeas_04.JPG" />
+            <!-- <div class="slide__content">Hello page 1</div> -->
+        </div>
+        <div class="slide__item fades">
+            <div class="slide__pagenumber">5 / 5</div>
+            <img class="slide_pic" src="./images/hydrangeas_05.JPG" />
+            <!-- <div class="slide__content">Hello page 1</div> -->
+        </div>
+        <a id="prev" class="slide__arraw slide__arraw--prev"> ❮ </a>
+        <a id="next" class="slide__arraw slide__arraw--next"> ❯ </a>
+        <div class="slide__dot">
+            <div class="dot" data-value="1"></div>
+            <div class="dot" data-value="2"></div>
+            <div class="dot" data-value="3"></div>
+            <div class="dot" data-value="4"></div>
+            <div class="dot" data-value="5"></div>
+        </div>
+    </div>
+    <!-- <img src="./images/family_128_modify.png" alt="family photo in Kyoto" height="250px"/> -->
     <!-- #DBA7D8, #51524A, #222C21 -->
 </body>
 </html>

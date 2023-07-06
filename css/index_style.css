@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0; 
+}
+
+header span{
+    display: block;
+    background: no-repeat center/100% url("./images/hydrangeas_05.JPG");
+    height: 200px;
+}
+
+#header_text_1{
+    text-align: center;
+    line-height: 200px;
+    font-size: 50px;
+    color: white;
+}
+
+h1{
+    text-align: center;    
+}
+
+.navigator_lan{
+    text-align: right;
+    margin-right: 20px;
+}
+
+.navigator_lan ul li{
+    display: inline;
+}
+
+.navigator_lan ul li a{
+    color: #51524A;
+    font-size: 16px;
+}
+
+.navigator{
+    text-align: left;
+    background-color: rgb(160, 90, 160);
+    line-height: 50px;
+}
+
+.navigator ul li{
+    margin-left: 10px;
+    display: inline;
+}
+
+.navigator ul li a{
+    font-size: 24px;
+    color: white;
+}
+
+.navigator ul li a:hover{
+    font-size: 24px;
+    color: gold;
+}
+
+.slide_pic{
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    vertical-align: middle;
+    transition: 0.5s;
+}
+
+.slide_pic:hover{
+    transform: scale(0.5);
+    transition: 0.5s;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.3);
+}
+
+.slide__item{
+    text-align: center;
+}
