@@ -5,7 +5,7 @@ body {
 
 header span{
     display: block;
-    background: no-repeat center/100% url("/images/hydrangeas_05.JPG");
+    background: no-repeat center/100% url("../index_pic.JPG");
     height: 200px;
 }
 
