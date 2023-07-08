@@ -13,8 +13,18 @@ header span{
     text-align: center;
     line-height: 200px;
     font-size: 50px;
+    font-family: "ZCOOL KuaiLe", "calibri";
     color: white;
 }
+
+#header_text_2{
+    text-align: center;
+    line-height: 200px;
+    font-size: 50px;
+    font-family: "Kalam", "calibri";
+    color: white;
+}
+
 
 h1{
     text-align: center;    
@@ -23,6 +33,7 @@ h1{
 .navigator_lan{
     text-align: right;
     margin-right: 20px;
+    font-family: "calibri";
 }
 
 .navigator_lan ul li{
@@ -30,6 +41,7 @@ h1{
 }
 
 .navigator_lan ul li a{
+    margin-top: 0;
     color: #51524A;
     font-size: 16px;
 }
@@ -38,6 +50,7 @@ h1{
     text-align: left;
     background-color: rgb(160, 90, 160);
     line-height: 50px;
+    font-family: "calibri";
 }
 
 .navigator ul li{
@@ -46,7 +59,7 @@ h1{
 }
 
 .navigator ul li a{
-    font-size: 24px;
+    font-size: 20px;
     color: white;
 }
 
@@ -67,41 +80,46 @@ h1{
     transform: scale(1.1);
     transition: 0.5s;
 }
-
+ 
 .slide__item{
-    text-align: center;
+    text-align: left;
     display: none;
     position: relative;
     overflow: hidden;
 }
 
 .slideshow {
-    margin-top: 45px;
+    margin-top: 3%;
+    padding-left: 10%;
     position: relative;
     transition: 2s;
     user-select: none;
-    text-align: center;
+    text-align: left;
 }
 
 .slide__pagenumber {
-    margin: 5px;
+    margin: 0.5%;
     padding: 5px;
     border-radius: 70% 70% / 80% 70%;
     background: rgba(0, 0, 0, 0.7);
     color: white;
     position: absolute;
-    right: 33.5%;
+    left: 35%;
     z-index: 1;
 }
 
 .slide__content {
     position: absolute;
     color: white;
-    background: rgba(0, 0, 0, 0.5);
-    bottom: 5%;
-    left: 34%;
-    padding: 0 10px;
-    border-radius: 5px;
+    background: rgba(22, 5, 17, 0.7);
+    top: 0%;
+    left: 50%;
+    padding: 50px 5px;
+    height: 100%;
+    width: 35%;
+    font-family: "ZCOOL KuaiLe", "Kalam", "calibri";
+    font-size: 24px;
+    text-align: center;
 }
 
 .slide__arraw {
@@ -123,15 +141,16 @@ h1{
 .slide__arraw--prev {
     position: absolute;
     top: 50%;
-    left: 28%;
+    left: 6%;
     transform: translateY(-50%);
     z-index: 1;
 }
 .slide__arraw--next {
     position: absolute;
-    right: 28%;
+    right: 50%;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 1;
 }
 
 .slide__dot {
@@ -139,7 +158,7 @@ h1{
     display: flex;
     position: absolute;
     bottom: 0px;
-    left: 50%;
+    left: 27%;
     transform: translateX(-50%);
 }
 
@@ -162,6 +181,7 @@ h1{
 .fades {
   animation: 1.5s fades;
 }
+
 @keyframes fades {
   from {
     opacity: 0.4;

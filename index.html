@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Kyoto Summer Image</title>
-    <link rel="stylesheet" href="./style.css"/>
+    <script type="text/javascript" src="./js/slide.js"></script>
+    <link rel="stylesheet" href="./css/index_style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-    <h1>Kyoto Summer Image</h1>
-    <div class="navigator">
+    <header>
+        <span>
+            <div id="header_text_2">Kyoto</div>
+        </sapn>
+    </header>
+    <div class="navigator_lan">
         <ul>
-            <li><a href="./index.html">English</a></li>
             <li><a href="./ch_index.html">Chinese</a></li>
         </ul>
     </div>
@@ -21,7 +29,51 @@
             <li><a href="./pages/experience.html">Experience</a></li>
         </ul>
     </div>
-    <!-- <img src="./images/family_128_modify.png" alt="family photo in Kyoto" height="250px"/> -->
-    <!-- #DBA7D8, #51524A, #222C21 -->
+    <div class="slideshow">
+        <div class="slide__item fades">
+            <div class="slide__pagenumber">1 / 5</div>
+            <img class="slide_pic" src="./images/Kansai_airport.JPG" />
+            <div class="slide__content">
+                Pic 1
+            </div>
+        </div>
+        <div class="slide__item fades">
+            <div class="slide__pagenumber">2 / 5</div>
+            <img class="slide_pic" src="./images/hydrangeas_02.JPG" />
+            <div class="slide__content">
+                Pic 2
+            </div>
+        </div>
+        <div class="slide__item fades">
+            <div class="slide__pagenumber">3 / 5</div>
+            <img class="slide_pic" src="./images/hydrangeas_03.JPG" />
+            <div class="slide__content">
+                Pic 3
+            </div>
+        </div>
+        <div class="slide__item fades">
+            <div class="slide__pagenumber">4 / 5</div>
+            <img class="slide_pic" src="./images/hydrangeas_04.JPG" />
+            <div class="slide__content">
+                Pic 4
+            </div>
+        </div>
+        <div class="slide__item fades">
+            <div class="slide__pagenumber">5 / 5</div>
+            <img class="slide_pic" src="./images/hydrangeas_05.JPG" />
+            <div class="slide__content">
+                Pic 5
+            </div>
+        </div>
+        <a id="prev" class="slide__arraw slide__arraw--prev"> ❮ </a>
+        <a id="next" class="slide__arraw slide__arraw--next"> ❯ </a>
+        <div class="slide__dot">
+            <div class="dot" data-value="1"></div>
+            <div class="dot" data-value="2"></div>
+            <div class="dot" data-value="3"></div>
+            <div class="dot" data-value="4"></div>
+            <div class="dot" data-value="5"></div>
+        </div>
+    </div>
 </body>
 </html>
