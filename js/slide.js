@@ -3,7 +3,7 @@ window.onload = function () {
     
     intervalId = setInterval(function () {
         plusSlides();
-    }, 5000);
+    }, 10000);
 
     let slideIndex = 1;
     showSlide(slideIndex);
@@ -26,7 +26,7 @@ window.onload = function () {
       clearInterval(intervalId);
       intervalId = setInterval(function () {
         plusSlides();
-      }, 5000);
+      }, 10000);
     }
   
     function divideSlides() {
@@ -34,7 +34,7 @@ window.onload = function () {
       clearInterval(intervalId);
       intervalId = setInterval(function () {
         plusSlides();
-      }, 5000);
+      }, 10000);
     }
   
     function showSlide(num) {
