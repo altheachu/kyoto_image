@@ -40,6 +40,8 @@ window.onload = function () {
     function showSlide(num) {
       let slides = document.getElementsByClassName("slide__item");
       let dots = document.getElementsByClassName("dot");
+      let descriptions = document.getElementsByClassName("slide__content");
+
       if (num > slides.length) {
         slideIndex = 1;
       }
@@ -55,8 +57,13 @@ window.onload = function () {
       for (let i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace("active", "");
       }
+      /*clear all dots descriptions*/
+      for (let i = 0; i < descriptions.length; i++) {
+        descriptions[i].style.display = "none";
+      }
   
       slides[slideIndex - 1].style.display = "block";
       dots[slideIndex - 1].className += " active";
+      descriptions[slideIndex - 1].style.display = "flex";
     }
   };
