@@ -240,7 +240,7 @@
         display: block;
         background: no-repeat center/100% url("../index_pic.JPG");
         height: auto;
-        width: 74%;
+        width: 98%;
     }
      
     #header_text_1{
@@ -260,7 +260,7 @@
     }
       
     .navigator_lan{
-        margin-left: 65%;
+        margin-left: 88%;
         font-family: "calibri";
     }
     
@@ -327,8 +327,8 @@
     
     .slideshow {
         margin-top: 3%;
-        left: 1.5%;
-        width: 70%;
+        margin-left: 11.5%;
+        width: 75%;
         height: 100%;
         position: relative;
         transition: 2s;
@@ -415,9 +415,9 @@
     
     .content__pages{
         text-align: center;
-        margin-top: 12%;
-        left: 1.5%;
-        width: 70%;
+        margin-top: 13%;
+        left: 11.5%;
+        width: 75%;
         position: relative;
         transition: 2s;
         user-select: none;
