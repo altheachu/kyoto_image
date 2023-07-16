@@ -233,14 +233,16 @@
     body {
         margin: 0;
         padding: 0; 
+        width: 840px;
     }
     
     header span{
         display: block;
         background: no-repeat center/100% url("../index_pic.JPG");
-        height: 100px;
+        height: auto;
+        width: 74%;
     }
-        
+     
     #header_text_1{
         text-align: center;
         line-height: 100px;
@@ -248,7 +250,7 @@
         font-family: "ZCOOL KuaiLe", "calibri";
         color: white;
     }
-    
+     
     #header_text_2{
         text-align: center;
         line-height: 100px;
@@ -256,11 +258,9 @@
         font-family: "Kalam", "calibri";
         color: white;
     }
-    
-    
+      
     .navigator_lan{
-        text-align: right;
-        margin-right: 20px;
+        margin-left: 65%;
         font-family: "calibri";
     }
     
@@ -276,7 +276,7 @@
     .navigator_lan ul li a{
         margin-top: 0;
         color: #51524A;
-        font-size: 16px;
+        font-size: 20px;
     }
     
     .navigator{
@@ -298,12 +298,12 @@
     }
     
     .navigator ul li a{
-        font-size: 18px;
+        font-size: 22px;
         color: white;
     }
     
     .navigator ul li a:hover{
-        font-size: 22px;
+        font-size: 26px;
         color: gold;
     }
     
@@ -313,7 +313,7 @@
     }
     
     .slide_pic{
-        width: 95%;
+        width: 100%;
         height: auto;
         object-fit: cover;
         vertical-align: middle;
@@ -327,8 +327,8 @@
     
     .slideshow {
         margin-top: 3%;
-        left: 2.5%;
-        width: 95%;
+        left: 1.5%;
+        width: 70%;
         height: 100%;
         position: relative;
         transition: 2s;
@@ -374,15 +374,15 @@
     }
     .slide__arraw--prev {
         position: absolute;
-        top: 110%;
-        left: 42%;
+        top: 115%;
+        left: 38%;
         transform: translateY(-50%);
         z-index: 1;
     }
     .slide__arraw--next {
         position: absolute;
-        left: 50.5%;
-        top: 110%;
+        left: 52%;
+        top: 115%;
         transform: translateY(-50%);
         z-index: 1;
     }
@@ -415,9 +415,9 @@
     
     .content__pages{
         text-align: center;
-        margin-top: 11%;
-        left: 2.5%;
-        width: 95%;
+        margin-top: 12%;
+        left: 1.5%;
+        width: 70%;
         position: relative;
         transition: 2s;
         user-select: none;
@@ -428,12 +428,11 @@
         position: relative;
         color: white;
         background: rgba(22, 5, 17, 0.7);
-        width: 95%;
-        height: 400px;
-        line-height: 36px;
-        left: 2.5%;
+        width: 100%;
+        height: 250px;
+        line-height: 20px;
         font-family: "ZCOOL KuaiLe", "Kalam", "calibri";
-        font-size: 36px;
+        font-size: 24px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -453,5 +452,5 @@
       to {
         opacity: 1;
       }
-    }
+    } 
 }
