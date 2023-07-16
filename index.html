@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" http-equiv="refresh" content="300" name="viewport">
     <title>Kyoto Summer Image</title>
     <script type="text/javascript" src="./js/slide.js"></script>
-    <link rel="stylesheet" href="./css/index_style.css"/>
+    <link rel="stylesheet" href="./css/index_style.css" type="text/css" media="screen and (min-width: 820px)"/>
+    <link rel="stylesheet" href="./css/index_style_notepad.css" type="text/css"  media="screen and (min-width: 426px) and (max-width:819px)"/>
+    <link rel="stylesheet" href="./css/index_style_mobiles.css" type="text/css"  media="screen and (max-width:425px)"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
@@ -29,125 +31,165 @@
             <li><a href="./pages/experience.html">Experience</a></li>
         </ul>
     </div>
-    <div class="slideshow">
-        <div class="slide__item fades">
-            <div class="slide__pagenumber">1 / 10</div>
-            <img class="slide_pic" src="./images/Kansai_airport.JPG" />
-            <div class="slide__content">
-                Capturing the twilight<br/> 
+    <div class="content">
+        <div class="slideshow">
+            <div class="slide__item fades">
+                <div class="slide__pagenumber">1 / 10</div>
+                <img class="slide_pic" src="./images/Kansai_airport.JPG" />
+            </div>
+            <div class="slide__item fades">
+                <div class="slide__pagenumber">2 / 10</div>
+                <img class="slide_pic" src="./images/Izumisano.JPG" />
+            </div>
+            <div class="slide__item fades">
+                <div class="slide__pagenumber">3 / 10</div>
+                <img class="slide_pic" src="./images/Kyoto_tower.JPG" />
+            </div>
+            <div class="slide__item fades">
+                <div class="slide__pagenumber">4 / 10</div>
+                <img class="slide_pic" src="./images/Nijo_Castle.JPG" />
+            </div>
+            <div class="slide__item fades">
+                <div class="slide__pagenumber">5 / 10</div>
+                <img class="slide_pic" src="./images/Byodo_In.JPG" />
+            </div>
+            <div class="slide__item fades">
+                <div class="slide__pagenumber">6 / 10</div>
+                <img class="slide_pic" src="./images/Mimuroto_zi.JPG" />
+            </div>
+            <div class="slide__item fades">
+                <div class="slide__pagenumber">7 / 10</div>
+                <img class="slide_pic" src="./images/hanamikoji.JPG" />
+            </div>
+            <div class="slide__item fades">
+                <div class="slide__pagenumber">8 / 10</div>
+                <img class="slide_pic" src="./images/Kiyomizu_dera.JPG" />
+            </div>
+            <div class="slide__item fades">
+                <div class="slide__pagenumber">9 / 10</div>
+                <img class="slide_pic" src="./images/Nanzenji_01.JPG" />
+            </div>
+            <div class="slide__item fades">
+                <div class="slide__pagenumber">10 / 10</div>
+                <img class="slide_pic" src="./images/Philosophers_walk_01.JPG" />
+            </div>
+            <a id="prev" class="slide__arraw slide__arraw--prev"> ❮ </a>
+            <a id="next" class="slide__arraw slide__arraw--next"> ❯ </a>
+            <div class="slide__dot">
+                <div class="dot" data-value="1"></div>
+                <div class="dot" data-value="2"></div>
+                <div class="dot" data-value="3"></div>
+                <div class="dot" data-value="4"></div>
+                <div class="dot" data-value="5"></div>
+                <div class="dot" data-value="6"></div>
+                <div class="dot" data-value="7"></div>
+                <div class="dot" data-value="8"></div>
+                <div class="dot" data-value="9"></div>
+                <div class="dot" data-value="10"></div>
+            </div>    
+        </div>
+        <div class="content__pages">
+            <div class="slide__content fades">
+                Capturing the twilight<br/>
+                <br/> 
                 alongside Kansai International Airport<br/>
+                <br/> 
                 as if stepping into an Impressionism painting<br/>
+                <br/> 
                 preserving a romantic moment.<br/>
             </div>
-        </div>
-        <div class="slide__item fades">
-            <div class="slide__pagenumber">2 / 10</div>
-            <img class="slide_pic" src="./images/Izumisano.JPG" />
-            <div class="slide__content">
+            <div class="slide__content fades">
                 The sunlight in Izumisano<br/>
+                <br/> 
                 colorizes the clouds in red,<br/>
+                <br/> 
                 awakening the slumbering streets<br/>
+                <br/> 
                 inch by inch...<br/> 
             </div>
-        </div>
-        <div class="slide__item fades">
-            <div class="slide__pagenumber">3 / 10</div>
-            <img class="slide_pic" src="./images/Kyoto_tower.JPG" />
-            <div class="slide__content">
+            <div class="slide__content fades">
                 In the Kyoto Tower<br/>
+                <br/> 
                 Getting a bird's-eye view of the whole city<br/>
+                <br/> 
                 Having a breathtaking scenes delight the sight<br/>
+                <br/> 
             </div>
-        </div>
-        <div class="slide__item fades">
-            <div class="slide__pagenumber">4 / 10</div>
-            <img class="slide_pic" src="./images/Nijo_Castle.JPG" />
-            <div class="slide__content">
+            <div class="slide__content fades">
                 Nijo Castle walked through four centuries,<br/>
+                <br/> 
                 The Tokugawa shogunate rised and fell<br/>
+                <br/> 
                 All remarkable figures has the ebb and flow<br/>
+                <br/> 
                 only the ancient castle stands steadfast here.
             </div>
-        </div>
-        <div class="slide__item fades">
-            <div class="slide__pagenumber">5 / 10</div>
-            <img class="slide_pic" src="./images/Byodo_In.JPG" />
-            <div class="slide__content">
+            <div class="slide__content fades">
                 Byodoin, a millennia-old temple,<br/>
+                <br/> 
                 minted on the 10 yen coin<br/>
+                <br/> 
                 On the rooftop of Phoenix Hall,<br/>
+                <br/> 
                 a pair of phoenixes<br/>
+                <br/> 
                 perhaps arrived in the Buddhism Pure Land.
             </div>
-        </div>
-        <div class="slide__item fades">
-            <div class="slide__pagenumber">6 / 10</div>
-            <img class="slide_pic" src="./images/Mimuroto_zi.JPG" />
-            <div class="slide__content">
+            <div class="slide__content fades">
                 In the garden of Mimuroto-ji Temple<br/>
+                <br/> 
                 thousands of hydrangeas bloom<br/>
+                <br/> 
                 just in the midst of midsummer<br/>
+                <br/> 
                 resembling a poetry of Japan's summer.<br/> 
+                <br/> 
                 Note: The temple's hydrangeas <br/>
+                <br/>
                 were traditionally used to console<br/>
             </div>
-        </div>
-        <div class="slide__item fades">
-            <div class="slide__pagenumber">7 / 10</div>
-            <img class="slide_pic" src="./images/hanamikoji.JPG" />
-            <div class="slide__content">
+            <div class="slide__content fades">
                 At a corner of Hanamikoozi<br/>
+                <br/> 
                 Mamasan in Izakaya:<br/>
+                <br/> 
                 'I told you to work hard,<br/>
-                how you dare to hang out? '<br/>
+                <br/> 
+                how dare you to hang out? '<br/>
+                <br/> 
                 staff: 'sumimasen!(sorry in Japanese)'<br/>
             </div>
-        </div>
-        <div class="slide__item fades">
-            <div class="slide__pagenumber">8 / 10</div>
-            <img class="slide_pic" src="./images/Kiyomizu_dera.JPG" />
-            <div class="slide__content">
+            <div class="slide__content fades">
                 A thousand-year-old Buddhist temple<br/>
+                <br/> 
                 with a stage hanging high<br/>
+                <br/> 
                 Water no longer flow tranquilly<br/>
+                <br/> 
                 as bustling crowds surge and throng<br/>
+                <br/> 
                 The Guanyin remains majestic<br/>
+                <br/> 
                 but the site fills with clamor.
             </div>
-        </div>
-        <div class="slide__item fades">
-            <div class="slide__pagenumber">9 / 10</div>
-            <img class="slide_pic" src="./images/Nanzenji_01.JPG" />
-            <div class="slide__content">
+            <div class="slide__content fades">
                 In the garden of Zen Temple,<br/>
+                <br/> 
                 ripples form circles in the gravels.<br/>
+                <br/> 
                 Feeling the peaceful ambiance at Nanzen-ji,<br/>
+                <br/> 
                 finding inside clarity through meditation.<br/>
             </div>
-        </div>
-        <div class="slide__item fades">
-            <div class="slide__pagenumber">10 / 10</div>
-            <img class="slide_pic" src="./images/Philosophers_walk_01.JPG" />
-            <div class="slide__content">
+            <div class="slide__content fades">
                 While strolling along the Philosopher's Walk<br/> 
+                <br/> 
                 finding the understanding as Nishida did.<br/>
+                <br/> 
                 Even cats attain enlightenment here,<br/>
+                <br/> 
                 'feline life should be leisure'.<br/>
             </div>
-        </div>
-        <a id="prev" class="slide__arraw slide__arraw--prev"> ❮ </a>
-        <a id="next" class="slide__arraw slide__arraw--next"> ❯ </a>
-        <div class="slide__dot">
-            <div class="dot" data-value="1"></div>
-            <div class="dot" data-value="2"></div>
-            <div class="dot" data-value="3"></div>
-            <div class="dot" data-value="4"></div>
-            <div class="dot" data-value="5"></div>
-            <div class="dot" data-value="6"></div>
-            <div class="dot" data-value="7"></div>
-            <div class="dot" data-value="8"></div>
-            <div class="dot" data-value="9"></div>
-            <div class="dot" data-value="10"></div>
         </div>
     </div>
 </body>
