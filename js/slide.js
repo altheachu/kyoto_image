@@ -41,6 +41,10 @@ window.onload = function () {
       let slides = document.getElementsByClassName("slide__item");
       let dots = document.getElementsByClassName("dot");
       let descriptions = document.getElementsByClassName("slide__content");
+      console.log('descriptions',descriptions.length)
+      if (descriptions.length == 0){
+        descriptions = document.getElementsByClassName("slide__content_ch");
+      }
 
       if (num > slides.length) {
         slideIndex = 1;
@@ -57,7 +61,7 @@ window.onload = function () {
       for (let i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace("active", "");
       }
-      /*clear all dots descriptions*/
+      /*clear all contents descriptions*/
       for (let i = 0; i < descriptions.length; i++) {
         descriptions[i].style.display = "none";
       }
