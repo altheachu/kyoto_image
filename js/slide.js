@@ -41,7 +41,7 @@ window.onload = function () {
       let slides = document.getElementsByClassName("slide__item");
       let dots = document.getElementsByClassName("dot");
       let descriptions = document.getElementsByClassName("slide__content");
-      console.log('descriptions',descriptions.length)
+      // console.log('descriptions',descriptions.length)
       if (descriptions.length == 0){
         descriptions = document.getElementsByClassName("slide__content_ch");
       }

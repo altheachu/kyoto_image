@@ -3,10 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <title>Kyoto Summer Image | Hydrangeas</title>
+    <script type="text/javascript" src="../js/turnjs4/extras/jquery.min.1.7.js"></script>
+    <script type="text/javascript" src="../js/turnjs4/extras/modernizr.2.5.3.min.js"></script>
+    <style>
+        .flipbook{
+            width: 500px;
+            height: 200px;
+        }
+        .flipbook.page{
+            width: 250px;
+            height: 200px;
+        }
+    </style>
 </head>
 <body>
     <h1>Producing...</h1>
     <div>
     </div>
+    <!-- <div class="flipbook-viewport">
+        <div class="container">
+            <div class="flipbook">
+                <div class="page" style="background-color: yellow;"></div>
+                <div class="double" style="background-color: blue;">test 1</div>
+                <div class="double" style="background-color: purple;">test 2</div>
+                <div class="double" style="background-color: gold;">test 3</div>
+                <div class="double" style="background-color: black;">test 4</div>
+                <div class="double" style="background-color: green;">test 5</div>
+                <div class="page" style="background-color: red;"></div>
+            </div>
+        </div>
+    </div> -->
+
+    <script type="text/javascript">
+
+        function loadApp() {
+        
+            var flipbook = $('.flipbook');
+        
+             // Check if the CSS was already loaded
+            
+            if (flipbook.width()==0 || flipbook.height()==0) {
+                setTimeout(loadApp, 10);
+                return;
+            }
+        
+            $('.flipbook .double').scissor();
+        
+            // Create the flipbook
+        
+            $('.flipbook').turn({
+                    // Elevation
+        
+                    elevation: 50,
+                    
+                    // Enable gradients
+        
+                    gradients: true,
+                    
+                    // Auto center this flipbook
+        
+                    autoCenter: true,
+        
+            });
+
+        }
+        
+        // Load the HTML4 version if there's not CSS transform
+        
+        yepnope({
+            test : Modernizr.csstransforms,
+            yep: ['../js/turnjs4/lib/turn.min.js'],
+            nope: ['../js/turnjs4/turn.html4.min.js'],
+            both: ['../js/turnjs4/lib/scissor.min.js', '../css/turnjs4/double-page/double-page.css'],
+            complete: loadApp
+        });
+        
+        </script>
 </body>
 </html>
