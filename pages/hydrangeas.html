@@ -3,19 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Kyoto Summer Image | Hydrangeas</title>
+    <meta charset="UTF-8"  name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="../js/turnjs4/extras/jquery.min.1.7.js"></script>
     <script type="text/javascript" src="../js/turnjs4/extras/modernizr.2.5.3.min.js"></script>
+    <script type="text/javascript" src="../js/book_double_page.js"></script>
     <link rel="stylesheet" href="../css/common_style.css" type="text/css"/>
     <link rel="stylesheet" href="../css/common_book.css" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">   
     <style>
-        .flipbook{
-            width: 500px;
-            height: 200px;
-        }
-        .flipbook.page{
-            width: 250px;
-            height: 200px;
-        }
     </style>
 </head>
 <body>
@@ -31,71 +28,44 @@
     </div>
     <div class="navigator">
         <ul>
-            <li><a href="./pages/hydrangeas.html">Hydrangeas</a></li>
-            <li><a href="./pages/heritage.html">Heritage</a></li>
-            <li><a href="./pages/food.html">Food</a></li>
-            <li><a href="./pages/experience.html">Experience</a></li>
+            <li><a href="../index.html">index</a></li>
+            <li><a href="./heritage.html">Heritage</a></li>
+            <li><a href="./food.html">Food</a></li>
+            <li><a href="./experience.html">Experience</a></li>
         </ul>
     </div>
     <div class="flipbook-viewport">
         <div class="container">
-            <div class="flipbook">
-                    <div class="page" style="background-color: yellow;">
-                        <span style="font-family: Kalam; font-size: 50px; height: 200px; line-height: 200px; margin-left: 200px;">cover page</span>
+            <div id="description">點頁面角落翻頁</div>
+            <div class="flipbook" id="book">
+                <div class="page cover_1"></div>
+                <div class="double content_1">
+                    <div class="whisper type_1">
+                        Walk with me into the winding path.<br/>
+                        Explore the charm of hydrangea flowers.
                     </div>
-                    <!-- <div class="double" style="background-color: blue;">test 1</div>
-                    <div class="double" style="background-color: purple;">test 2</div>
-                    <div class="double" style="background-color: gold;">test 3</div>
-                    <div class="double" style="background-color: black;">test 4</div>
-                    <div class="double" style="background-color: green;">test 5</div> -->
-                    <div class="page" style="background-color: red;"></div>
+                </div>
+                <div class="double content_2">
+                    <div class="whisper type_2">
+                        The color of hydrangeas<br/> 
+                        varies depending on the <br/>
+                        soil's acidity level.<br/>
+                    </div>                    
+                </div>
+                <div class="double content_3">
+                    <div class="whisper type_3">
+                        Mimurotozi temple is Kyoto's <br/>
+                        most popular spots for enjoying <br/>
+                        hydrangea flowers. <br/>
+                        Ten thousand hydrangea flowers blooms<br/> 
+                        together in June there.
+                    </div>  
+                </div>
+                <div class="double" style="background-color: black;">test 4</div>
+                <div class="double" style="background-color: green;">test 5</div>
+                <div class="page" style="background-color: red;"></div>
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-
-        function loadApp() {
-        
-            var flipbook = $('.flipbook');
-        
-             // Check if the CSS was already loaded
-            
-            if (flipbook.width()==0 || flipbook.height()==0) {
-                setTimeout(loadApp, 10);
-                return;
-            }
-        
-            $('.flipbook .double').scissor();
-        
-            // Create the flipbook
-        
-            $('.flipbook').turn({
-                    // Elevation
-        
-                    elevation: 50,
-                    
-                    // Enable gradients
-        
-                    gradients: true,
-                    
-                    // Auto center this flipbook
-        
-                    autoCenter: true,
-        
-            });
-
-        }
-        
-        // Load the HTML4 version if there's not CSS transform
-        
-        yepnope({
-            test : Modernizr.csstransforms,
-            yep: ['../js/turnjs4/lib/turn.min.js'],
-            nope: ['../js/turnjs4/turn.html4.min.js'],
-            both: ['../js/turnjs4/lib/scissor.min.js', '../css/turnjs4/double-page/double-page.css'],
-            complete: loadApp
-        });
-        
-        </script>
 </body>
 </html>
