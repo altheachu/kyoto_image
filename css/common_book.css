@@ -27,7 +27,11 @@
     }
 
     .cover_1{
-        background-image: url(../images/Mimuroto_zi.JPG);
+        background-image: url(../images/Mimuroto_zi.jpg);
+    }
+
+    .cover_2{
+        background-image: url(../images/Mimuroto_zi_2.jpg);
     }
 
     #book.grab{
@@ -68,6 +72,22 @@
         background-image: url(../images/hydrangeas_03.jpg);
     }
 
+    .content_4{
+        background-image: url(../images/hydrangeas_04.jpg);
+    }
+
+    .content_5{
+        background-image: url(../images/hydrangeas_07.jpg);
+    }
+
+    .content_6{
+        background-image: url(../images/hydrangeas_08.jpg);
+    }
+
+    .content_7{
+        background-image: url(../images/hydrangeas_06.jpg);
+    }
+
     .whisper{
         position: relative; 
         display: inline-block;
@@ -85,6 +105,22 @@
     .type_3{
         margin-top: 100px;
         margin-left: 650px;
+    }
+    .type_4{
+        margin-top: 150px;
+        margin-left: 130px;
+    }
+    .type_5{
+        margin-top: 150px;
+        margin-left: 780px;
+    }
+    .type_6{
+        margin-top: 10px;
+        margin-left: 820px;
+    }
+    .type_7{
+        margin-top: 125px;
+        margin-left: 825px;
     }
 }
 
