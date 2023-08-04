@@ -34,8 +34,10 @@ function loadApp() {
     // show reminder info
     $("#book").hover(function(){
         $("#description").show();
+        $("#description_ch").show();
     },function(){
         $("#description").hide();
+        $("#description_ch").hide();
     });
 
     // If hovering over corner change cursor to Grab
@@ -45,6 +47,7 @@ function loadApp() {
             $('#book').removeClass("notgrab");
             $('#book').addClass("grab");
             $("#description").hide();
+            $("#description_ch").hide();
         }else{
             $('#book').removeClass("grabbing");
             $('#book').removeClass("grab");
@@ -79,8 +82,8 @@ function loadApp() {
 
 yepnope({
     test : Modernizr.csstransforms,
-    yep: ['../js/turnjs4/lib/turn.min.js'],
-    nope: ['../js/turnjs4/turn.html4.min.js'],
-    both: ['../js/turnjs4/lib/scissor.min.js', '../css/turnjs4/double-page/double-page.css'],
+    yep: ['../../js/turnjs4/lib/turn.min.js'],
+    nope: ['../../js/turnjs4/turn.html4.min.js'],
+    both: ['../../js/turnjs4/lib/scissor.min.js', '../../css/turnjs4/double-page/double-page.css'],
     complete: loadApp
 });
