@@ -76,6 +76,14 @@ function loadApp() {
         $('#book').addClass("notgrab"); 
     });
 
+    $("#flipbook_mobile").turn({
+        width: 400,
+        height: 300,
+        autoCenter: true
+      });
+
+    $("#flipbook_mobile").turn("display","single");
+
 }
 
 // Load the HTML4 version if there's not CSS transform

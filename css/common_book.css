@@ -130,6 +130,10 @@
         margin-top: 340px;
         margin-left: 1060px;
     }
+
+    #flipbook_mobile{
+        display: none;
+    }
 }
 
 @media screen and (max-width:820px){
