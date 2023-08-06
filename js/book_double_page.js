@@ -77,12 +77,45 @@ function loadApp() {
     });
 
     $("#flipbook_mobile").turn({
-        width: 400,
-        height: 300,
+        height: 500,
         autoCenter: true
       });
 
     $("#flipbook_mobile").turn("display","single");
+
+    // If hovering over corner change cursor to Grab
+    $("#flipbook_mobile").bind("start", function(event, pageObject, corner) {
+        if (corner=="tr" || corner=="br" || corner=="tl" || corner=="bl" || corner=="l" || corner=="r") {
+            $('#flipbook_mobile').removeClass("grabbing");
+            $('#flipbook_mobile').removeClass("notgrab");
+            $('#flipbook_mobile').addClass("grab");
+        }else{
+            $('#flipbook_mobile').removeClass("grabbing");
+            $('#flipbook_mobile').removeClass("grab");
+            $('#flipbook_mobile').addClass("notgrab");   
+        }
+    });
+    // If mouse down while in Grab state, change to Grabbing
+    $("#flipbook_mobile").mousedown(function(){
+        if($('#flipbook_mobile').hasClass("grab")){
+            $('#flipbook_mobile').removeClass("grab");
+            $('#flipbook_mobile').removeClass("notgrab");
+            $('#flipbook_mobile').addClass("grabbing");     
+        }
+    })
+    // If mouse up while over book kill Grab
+    $("#flipbook_mobile").mouseup(function(){
+        $('#flipbook_mobile').removeClass("grabbing");
+        $('#flipbook_mobile').removeClass("grab");
+        $('#flipbook_mobile').addClass("notgrab");      
+    })
+    
+    // If transition of book ends, kill Grab
+    $("#flipbook_mobile").bind("end", function(event, pageObject, turned){
+        $('#flipbook_mobile').removeClass("grabbing");
+        $('#flipbook_mobile').removeClass("grab");
+        $('#flipbook_mobile').addClass("notgrab"); 
+    });
 
 }
 

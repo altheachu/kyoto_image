@@ -134,6 +134,14 @@
     #flipbook_mobile{
         display: none;
     }
+
+    .mobile_container{
+        display: none;
+    }
+
+    #description_m{
+        display: none;
+    }
 }
 
 @media screen and (max-width:820px){
@@ -151,5 +159,82 @@
     }
     .flipbook.page{
         display: none;
+    }
+    #description_m, #description_ch_m{
+        color: purple;
+        z-index: 1;
+        text-align: center;
+        font-weight: 500;
+        margin-top: 0;
+        padding: 0;
+        font-family: "calibri";
+    }
+    .content_8{
+        background-image: url(../images/Mimuroto_zi_4.jpg);
+    }
+    .content_9{
+        background-image: url(../images/hydrangeas_09.jpg);
+    }
+    .content_10{
+        background-image: url(../images/hydrangeas_10.jpg);
+    }
+    .content_11{
+        background-image: url(../images/hydrangeas_11.jpg);
+    }
+    .content_12{
+        background-image: url(../images/hydrangeas_12.jpg);
+    }
+    .content_13{
+        background-image: url(../images/hydrangeas_13.jpg);
+    }
+    .content_14{
+        background-image: url(../images/hydrangeas_14.jpg);
+    }
+    .content_15{
+        background-image: url(../images/hydrangeas_15.jpg);
+    }
+    .content_16{
+        background-image: url(../images/hydrangeas_16.jpg);
+    }
+    .whisper{
+        position: relative; 
+        display: inline-block;
+        font-family: "ZCOOL KuaiLe", "Kalam", "calibri";
+        font-size: 16px;
+        line-height: 32px;
+    }
+    .type_9{
+        margin-top: 320px;
+        margin-left: 60px;
+    }
+    .type_10{
+        margin-top: 350px;
+        margin-left: 200px;
+    }
+    .type_11{
+        margin-top: 335px;
+        margin-left: 50px;
+        font-size: 14px;
+    }
+    .type_12{
+        margin-top: 100px;
+        margin-left: 20px;
+        text-align: center;
+    }
+    .type_13{
+        margin-top: 20px;
+        margin-left: 120px;
+        color: white;
+        text-align: right;
+        opacity: 80%;
+    }
+    .type_14{
+        margin-top: 20px;
+        margin-left: 80px;
+        text-align: center;
+    }
+    .type_15{
+        margin-top: 360px;
+        margin-left: 20px;
     }
 }
