@@ -142,6 +142,10 @@
     #description_m{
         display: none;
     }
+
+    #description_ch_m{
+        display: none;
+    }
 }
 
 @media screen and (max-width:820px){
@@ -168,6 +172,12 @@
         margin-top: 0;
         padding: 0;
         font-family: "calibri";
+    }
+    #description{
+        display: none;
+    }
+    #description_ch{
+        display: none;
     }
     .content_8{
         background-image: url(../images/Mimuroto_zi_4.jpg);
