@@ -1,4 +1,3 @@
-
 function loadApp() {
         
     var flipbook = $('.flipbook');
