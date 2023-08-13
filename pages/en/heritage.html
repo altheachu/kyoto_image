@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Kyoto Summer Image | Heritage</title>
+    <meta charset="UTF-8"  name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/common_style.css" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet"> 
+    <style>
+        .container {
+            display: flex;
+            height: 60vh;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 1rem;
+        }
+        .container .card {
+            flex-basis: 20%;
+            background-color: lightgrey;
+            text-align: center;
+            height: 50vh;
+            border-radius: 10px;
+        }
+        .card_cover{
+            width: 100%;
+            height: 45vh;
+            border-radius: 10px;
+        }
+        .card-txt {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Producing...</h1>
-    <div>
+    <header>
+        <span>
+            <div id="header_text_2">Kyoto</div>
+        </sapn>
+    </header>
+    <div class="navigator_lan">
+        <ul>
+            <li><a href="../ch/hydrangeas.html">Chinese</a></li>
+        </ul>
     </div>
+    <div class="navigator">
+        <ul>
+            <li><a href="../../index.html">Index</a></li>
+            <li><a href="./heritage.html">Heritage</a></li>
+            <li><a href="./food.html">Food</a></li>
+            <li><a href="./experience.html">Experience</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div>
+                <img class="card_cover" src="../../test.jpg"/>
+                <div>二條成</div>
+            </div>
+            <div class="card-txt">古蹟估嘰咕嘰辜</div>
+        </div>
+        <div class="card">平等院</div>
+        <div class="card">清水寺</div>
+        <div class="card">南禪寺</div>
+    </div>
+    <!-- <div>https://ithelp.ithome.com.tw/articles/10277336?sc=iThomeR</div> -->
 </body>
 </html>
