@@ -6,3 +6,6 @@ https://colorhunt.co/
 
 # font reference
 https://fonts.google.com/noto/specimen/Noto+Sans+TC
+
+# flex reference
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
