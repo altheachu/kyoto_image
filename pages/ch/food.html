@@ -10,14 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet"> 
     <style>
     
-        .flex-container{
+        .container_1{
             display: flex;
             height: auto;
             justify-content: center;
             align-items: center;
             margin: 1rem;
         }
-        .container{
+        .container_2{
             display: grid;
             width: 70vw;
             height: 70vh;
@@ -25,21 +25,21 @@
             grid-template-rows: 1fr 1fr 1fr 1fr;
             gap:1rem;
         }
-        .container > div{
+        .container_2 > div{
             border-radius: 1.5rem;
             border: 1px solid black;
         }
-        .store{
+        .store_area{
             grid-column: span 2;
             grid-row: span 1;
             background-color: aqua; 
         }     
-        .food{
+        .record{
             grid-column: span 2;
             grid-row: span 3; 
             background-color: greenyellow;
         }
-        .flex-container-2{
+        .container_3{
             display: flex;
             height: auto;
             justify-content: center;
@@ -47,7 +47,7 @@
             position: relative;
         } 
     
-        .flex-container-2 > .text{
+        .container_3 > .store_name{
             display: flex;
             justify-content: center;
             align-items: center;
@@ -61,27 +61,46 @@
             border-radius: 1rem;
         }
     
-        .flex-container-2 > .text > .span{
+        .container_3 > .store_name > .span{
             position: absolute;
         }
     
-        .flex-container-2>img{
-            width:16rem; 
+        .container_3 > img{
+            width: 16rem; 
             height: auto; 
             border-radius: 1rem;
         }
     
-        .flex-container-2:hover .text{
+        .container_3:hover .store_name{
             opacity: 1;
-        } 
-    
+        }
+        
+        #modal{
+            display: none;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 12px;
+            max-width: 360px;
+        }
+
         @media screen and (max-width: 820px){
-            .container{
+            .container_2{
+                display: grid;
                 width: 95vw;
-                height: 75vh;
+                height: auto;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: repeat(4,1fr);
+                gap:1rem;
             }
-            .store{
-                order: 2;
+            .store_area{
+                display: none;
+            }
+            .record{
+                display: none;
+            }
+            .container_3 > img{
+                width: 10rem; 
+                border-radius: 1rem;
             }
         }
     </style>
@@ -106,33 +125,72 @@
             <li><a href="./experience.html">體驗</a></li>
         </ul>
     </div>
-    <div class="flex-container">
-        <div class="container">
-            <div class="flex-container-2" id="store_1">
+    <div class="container_1">
+        <div class="container_2">
+            <div class="container_3" id="store_1">
                 <img src="../../images/Philosophers_walk_01.JPG" >
-                <div class="text">
+                <div class="store_name">
                     <span>名代豬排</span>
                 </div>
             </div>
-            <div class="flex-container-2" id="store_2">
-                <img src="../../images/Philosophers_walk_01.JPG" >
-                <div class="text">
+            <div class="container_3" id="store_2">
+                <img src="" >
+                <div class="store_name">
                     <span>鯖姿壽司</span>
                 </div>
             </div>
-            <div class="flex-container-2 store"><span id="store_test">store info</div>
-            <div class="test3">順正豆腐</div>
-            <div class="test4">彌生軒</div>
-            <div class="food">food info</div>
-            <div class="test5">龜屋良長</div>
-            <div class="test1 order">中村藤吉</div>
-            <div class="test1 order">宇治川餅</div>
-            <div class="test1 order">俵屋吉富</div>
+            <div class="container_3 store_area">
+                <span id="store_test">store info</span>
+            </div>
+            <div class="container_3" id="store_3">
+                <img src="../../images/Philosophers_walk_01.JPG" >
+                <div class="store_name">
+                    <span>順正豆腐</span>
+                </div>
+            </div>
+            <div class="container_3" id="store_4">
+                <img src="" >
+                <div class="store_name">
+                    <span>彌生軒</span>
+                </div>
+            </div>
+            <div class="container_3 record">food info</div>
+            <div class="container_3" id="store_5">
+                <img src="../../images/Philosophers_walk_01.JPG" >
+                <div class="store_name">
+                    <span>龜屋良長</span>
+                </div>
+            </div>
+            <div class="container_3" id="store_6">
+                <img src="" >
+                <div class="store_name">
+                    <span>中村藤吉</span>
+                </div>
+            </div>
+            <div class="container_3" id="store_7">
+                <img src="../../images/Philosophers_walk_01.JPG" >
+                <div class="store_name">
+                    <span>宇治川餅</span>
+                </div>
+            </div>
+            <div class="container_3" id="store_8">
+                <img src="" >
+                <div class="store_name">
+                    <span>俵屋吉富</span>
+                </div>
+            </div>
+        </div>
+        <div id="modal">
+            test modal
         </div>
     </div>
     <script>
         document.getElementById('store_1').addEventListener("click", function(){
-            document.getElementById('store_test').innerHTML="這是明天豬排的店鋪資訊"
+            document.getElementById('store_test').innerHTML="這是名代豬排的店鋪資訊";
+            document.getElementById('modal').style.display="inline";
+            // modal
+
+            //https://uu9924079.medium.com/%E9%81%8B%E7%94%A8-js-%E6%88%96%E7%B4%94-css-%E8%A3%BD%E4%BD%9C%E7%B0%A1%E6%98%93-modal-a4c05d028902
         });
     </script>
 </body>
