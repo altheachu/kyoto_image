@@ -75,12 +75,27 @@
             opacity: 1;
         }
         
+        #modal_container{
+            display: inline-block;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
         #modal{
-            display: none;
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 12px;
-            max-width: 360px;
+            display: grid;
+            width: 95%;
+            height: 60%;
+            position: fixed;
+            top: 20%;
+            left: 2.5%;
+            background-color: rgba(255, 255, 255, 1);
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 3fr 5fr 1fr;
+            border-radius: 1rem;
         }
 
         @media screen and (max-width: 820px){
@@ -180,17 +195,30 @@
                 </div>
             </div>
         </div>
-        <div id="modal">
-            test modal
+        <div id="modal_container">
+            <div id="modal">
+                <div style="grid-column-start: 1; grid-column-end: 3; text-align: center;">test1</div>
+                <div >test2</div>
+                <div id="test"style="grid-column-start: 1; grid-column-end: 3; text-align: center;">button</div>
+            </div>
         </div>
     </div>
     <script>
         document.getElementById('store_1').addEventListener("click", function(){
             document.getElementById('store_test').innerHTML="這是名代豬排的店鋪資訊";
-            document.getElementById('modal').style.display="inline";
+            console.log(Number(window.screen.availWidth))
+            if (Number(window.screen.availWidth) < 820){
+                document.getElementById('modal_container').style.display="inline-block";
+                document.getElementById('modal').style.display="grid";
+            }
+
             // modal
 
             //https://uu9924079.medium.com/%E9%81%8B%E7%94%A8-js-%E6%88%96%E7%B4%94-css-%E8%A3%BD%E4%BD%9C%E7%B0%A1%E6%98%93-modal-a4c05d028902
+        });
+        document.getElementById('test').addEventListener("click", function(){
+            document.getElementById('modal_container').style.display="none";
+            document.getElementById('modal').style.display="none";
         });
     </script>
 </body>
