@@ -155,7 +155,7 @@
     background-color: rgb(160, 90, 160);
     color: white;
     width: 10rem;
-    height: 2rem;
+    height: 4rem;
     border-radius: 10px 10px 10px 10px;
     align-items: center;
     justify-content: center;
@@ -207,11 +207,14 @@
     }
     
     #modal_content{
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: #51484f ;
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
     
     #modal_button{
         width: 15rem;
+        font-size: 2rem;
     }
 }
