@@ -155,7 +155,7 @@
     background-color: rgb(160, 90, 160);
     color: white;
     width: 10rem;
-    height: 4rem;
+    height: 3rem;
     border-radius: 10px 10px 10px 10px;
     align-items: center;
     justify-content: center;
@@ -215,6 +215,6 @@
     
     #modal_button{
         width: 15rem;
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 }
