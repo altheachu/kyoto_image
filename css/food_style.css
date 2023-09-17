@@ -112,14 +112,54 @@
 #modal{
     display: grid;
     width: 95%;
-    height: 60%;
+    height: 70%;
     position: fixed;
     top: 20%;
     left: 2.5%;
     background-color: rgba(255, 255, 255, 1);
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 3fr 5fr 1fr;
+    grid-template-columns: 3fr 4fr;
+    grid-template-rows: 1fr 5fr 3fr 1fr;
     border-radius: 1rem;
+}
+
+#modal_title{
+    grid-column-start: 1; 
+    grid-column-end: 3; 
+    margin-top: 1rem;
+    text-align: center;
+    font-weight:bolder;
+    font-size: 1.25rem;
+}
+
+#modal_content{
+    grid-column-start: 1; 
+    grid-column-end: 3; 
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    line-height: 2;
+    color: #51484f ;
+}
+
+#modal_close_area{
+    margin-top: 1rem;
+    display: flex;
+    grid-column-start: 1; 
+    grid-column-end: 3; 
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+#modal_button{
+    display: flex;
+    background-color: rgb(160, 90, 160);
+    color: white;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 10px 10px 10px 10px;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
 }
 
 @media screen and (max-width: 415px){
