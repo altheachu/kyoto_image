@@ -8,7 +8,7 @@
 .container_2{
     display: grid;
     width: 70vw;
-    height: 75vh;
+    height: 95vh;
     grid-template-columns: 0.8fr 0.8fr 1.2fr 1.2fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap:1rem;
@@ -68,8 +68,8 @@
 
 .store_info{
     display: grid;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     justify-content: center;
     align-items: center;
     grid-template-columns: 0.5fr 3.5fr;
@@ -77,20 +77,20 @@
     height: 100%;
     width: 100%;
     font-weight:bolder;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 .food_info{
     display: grid;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     justify-content: center;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 1fr;
     height: 90%;
     width: 100%;
     font-weight:bolder;
-    font-size: 1.25rem;
+    font-size: 1rem;
     line-height: 2;
 }
 
@@ -201,5 +201,17 @@
     .container_3 > img{
         width: 100%; 
         border-radius: 1rem;
+    }
+    #modal_title{
+        font-size: 2rem;
+    }
+    
+    #modal_content{
+        font-size: 2rem;
+        color: #51484f ;
+    }
+    
+    #modal_button{
+        width: 15rem;
     }
 }
