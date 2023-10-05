@@ -1,0 +1,29 @@
+.experience_container{
+    margin-top: 1.5rem;
+}
+
+.flex_formatter{
+    display: flex;
+    justify-content: center;
+}
+
+.img_formatter{
+    margin: 0.5rem;
+}
+
+.p_formatter{
+    margin-top: 1rem;
+}
+
+.list_image_phone{
+    display: none;
+}
+
+@media screen and (max-width: 420px){
+    .list_image_web{
+        display: none;
+    }
+    .list_image_phone{
+        display: block;
+    }
+}
