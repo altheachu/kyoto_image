@@ -68,8 +68,15 @@
             <div class="container_3 record">
                 <div class="food_info">
                     <div class="my_comments" id="comments"></div>
-                    <div class="google_map"></div>
-                    <div class="google_basic_info"></div>
+                    <div class="google_map" id="largemap"></div>
+                    <div class="google_basic_info">
+                        <div>今日營業時間</div>
+                        <div id="openinghours"></div>
+                        <div>評價</div>
+                        <div id="rating"></div>
+                        <div>價格</div>
+                        <div id="pricelevel"></div>
+                    </div>
                 </div>
             </div>
             <div class="container_3" id="store_5">
@@ -110,6 +117,7 @@
             </div>
         </div>
     </div>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZI9mHYnruYEcp77f6VogimJ7N88oS6Y8&loading=async&libraries=places&callback=initMap"></script>
     <script type="text/javascript" src="../../js/food.js"></script>
 </body>
 </html>

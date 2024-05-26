@@ -89,7 +89,7 @@
     padding-left: 2rem;
     padding-right: 2rem;
     justify-content: center;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     height: 90%;
     width: 100%;
@@ -104,6 +104,19 @@
 
 .my_comments{
     grid-column: span 2;
+    color: #51484f ;
+}
+
+.google_map{
+    height: 30vh;
+    display: none;
+}
+
+.google_basic_info{
+    display: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    padding-left: 2rem;
     color: #51484f ;
 }
 

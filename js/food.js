@@ -8,6 +8,7 @@ const store = [
         '應該很受女性的歡迎。',
         mobile_intro:'主打以三元豬、大麥飯、特製柚子沙拉醬等特選食材打造的美味豬排飯。豬排外衣酥脆、肉質鮮美，搭配客人自己研磨的芝麻泥分外美味。' + 
         '配餐的高麗菜絲清脆爽口，搭配特製柚子醬十分消暑。腐竹套餐則是將時蔬用腐皮包裹再油炸，滋味爽口宜人。',
+        searchName: "名代炸豬排 京都 Porta 店",
     },
     {
         name: "京菓子司 亀屋良長",
@@ -19,6 +20,7 @@ const store = [
         mobile_intro:'200餘年的京菓子老店，招牌為沖繩黑糖外皮包裹紅豆泥的「烏羽玉」及搭配吐司的薄片羊羹。' + 
         '烏羽玉擁有漆器般的光澤，外型靈感來自檜扇(植物名)的果實。風味層次細膩。小倉紅豆跟肉桂奶油地瓜口味的薄片羊羹，個人覺得單吃普通，' + 
         '可能還是要融化在吐司上才美味。',
+        searchName: "龜屋良長 京都本店",
     },
     {
         name: "京菓子司 俵屋吉富",
@@ -31,6 +33,7 @@ const store = [
         mobile_intro:'我覺得琥珀糖是日本夏季的美意識，所以一直很想吃吃看。雖然沒有實際走訪這家店，但在商店購入品嘗。' + 
         '這盒檸檬琥珀糖，每顆糖果都是工整的正六邊形，淡黃色的外表晶瑩透亮。外殼薄脆，糖餡Q軟。' + 
         '此外，「俵屋吉富」最有名的和菓子「雲龍」，以狩野洞春的〈雲龍圖〉為靈感製作，下次一定要吃吃看。',
+        searchName: "俵屋吉富　烏丸店",
     },
     {
         name: "南禪寺 順正",
@@ -43,6 +46,7 @@ const store = [
         mobile_intro:'順正位於佛門清修之地「南禪寺」附近，以口味濃郁的湯豆腐套餐名聞遐邇。' + 
         '穿越順正的大門，走過古色古香的日式庭園，進入廂房。座位旁有一扇大窗子，可以眺望庭院景色、向四季借景。' + 
         '套餐除了豆香濃郁的湯豆腐外，還包含我喜歡的「田樂燒」(味噌醬烤豆腐)！',
+        searchName: "南禪寺 順正",
     },
     {
         name: "いづ重 壽司",
@@ -54,6 +58,7 @@ const store = [
         mobile_intro:'「いづ重」位於衹園八阪神社前，以傳承百年的鯖姿壽司及大阪地區的壓壽司聞名。' +
         '鯖姿壽司是以昆布包裹醃漬鯖魚與白飯捲起再切片，魚肉與白飯同時放入口中，方能感受到兩者相得益彰。' + 
         '此外，這家店的箱壽司與啤酒也相當美味，出餐時也會把同桌餐點併在一大盤中，讓鯖姿壽司跟箱壽司共譜食欲之歌。',
+        searchName: "Izuju Sushi",
     },
     {
         name: "中村藤吉",
@@ -66,6 +71,7 @@ const store = [
         mobile_intro:'「中村藤吉」是位於宇治的百年茶商，擁有日式、西式各種美味的抹茶甜品。' +
         '抹茶聖代的上層是抹茶冰淇淋及白玉糰子，下層則包含抹茶蛋糕和抹茶果凍，一份甜點、多重美味。' + 
         '招牌抹茶巴菲除了上述內料外，還多加了一層堅果增添口感，最上層則用抹茶粉畫出了中村藤吉的Logo，十分吸睛。',
+        searchName: "中村藤吉本店 平等院店",
     },
     {
         name: "宇治川餅",
@@ -78,6 +84,7 @@ const store = [
         mobile_intro:'這是在景區的小賣店意外挖到的寶，雖然抹茶的味道很重，卻不會感到任何苦澀，因為糰子的甜度跟抹茶的苦味搭配得好。' +
         '甜而不膩的滋味，配合充滿嚼勁的口感，讓人驚喜萬分。作為送給同事的土產，也受到大家一致的好評。' + 
         '除了品嘗可以讓自己開心之外，跟別人分享後還可以一起討論感想，給我很大的樂趣。',
+        searchName: "宇治川餅",
     },
     {
         name: "YAYOI 彌生軒",
@@ -89,6 +96,7 @@ const store = [
         mobile_intro:'在台灣也有分店的平價定食連鎖餐廳，但是我覺得在台灣的市場定位偏輕奢華，但是京都的是家常料理，所以菜單的內容也不一樣。' +
         '唐揚炸雞定食及辣湯麵都是台灣沒有的品項：唐揚雞外脆內多汁，真的好好吃！定時內含的味噌湯也濃郁美味。' + 
         '辣湯麵的湯頭雖然辛辣卻又十分滑潤，會激起滿滿的食欲。',
+        searchName: "彌生軒 四條烏丸店",
     },
 ]
 
@@ -98,8 +106,8 @@ document.getElementById('store_1').addEventListener("click", function(){
     document.getElementById('store_intro').innerHTML = store[0].intro;
     document.getElementById('store_website').innerHTML = store[0].website;
     document.getElementById('comments').innerHTML = store[0].comments;
+    getMap(store[0].searchName);
     
-    console.log(Number(window.screen.availWidth))
     if (Number(window.screen.availWidth) < 821){
         document.getElementById('modal_container').style.display="inline-block";
         document.getElementById('modal').style.display="grid";
@@ -113,6 +121,7 @@ document.getElementById('store_2').addEventListener("click", function(){
     document.getElementById('store_intro').innerHTML = store[1].intro;
     document.getElementById('store_website').innerHTML = store[1].website;
     document.getElementById('comments').innerHTML = store[1].comments;
+    getMap(store[1].searchName);
 
     if (Number(window.screen.availWidth) < 821){
         document.getElementById('modal_container').style.display="inline-block";
@@ -127,6 +136,7 @@ document.getElementById('store_3').addEventListener("click", function(){
     document.getElementById('store_intro').innerHTML = store[2].intro;
     document.getElementById('store_website').innerHTML = store[2].website;
     document.getElementById('comments').innerHTML = store[2].comments;
+    getMap(store[2].searchName);
     
     if (Number(window.screen.availWidth) < 821){
         document.getElementById('modal_container').style.display="inline-block";
@@ -141,6 +151,7 @@ document.getElementById('store_4').addEventListener("click", function(){
     document.getElementById('store_intro').innerHTML = store[3].intro;
     document.getElementById('store_website').innerHTML = store[3].website;
     document.getElementById('comments').innerHTML = store[3].comments;
+    getMap(store[3].searchName);
     
     if (Number(window.screen.availWidth) < 821){
         document.getElementById('modal_container').style.display="inline-block";
@@ -155,6 +166,7 @@ document.getElementById('store_5').addEventListener("click", function(){
     document.getElementById('store_intro').innerHTML = store[4].intro;
     document.getElementById('store_website').innerHTML = store[4].website;
     document.getElementById('comments').innerHTML = store[4].comments;
+    getMap(store[4].searchName);
     
     if (Number(window.screen.availWidth) < 821){
         document.getElementById('modal_container').style.display="inline-block";
@@ -169,6 +181,7 @@ document.getElementById('store_6').addEventListener("click", function(){
     document.getElementById('store_intro').innerHTML = store[5].intro;
     document.getElementById('store_website').innerHTML = store[5].website;
     document.getElementById('comments').innerHTML = store[5].comments;
+    getMap(store[5].searchName);
     
     if (Number(window.screen.availWidth) < 821){
         document.getElementById('modal_container').style.display="inline-block";
@@ -183,6 +196,7 @@ document.getElementById('store_7').addEventListener("click", function(){
     document.getElementById('store_intro').innerHTML = store[6].intro;
     document.getElementById('store_website').innerHTML = store[6].website;
     document.getElementById('comments').innerHTML = store[6].comments;
+    getMap(store[6].searchName);
     
     if (Number(window.screen.availWidth) < 821){
         document.getElementById('modal_container').style.display="inline-block";
@@ -197,6 +211,7 @@ document.getElementById('store_8').addEventListener("click", function(){
     document.getElementById('store_intro').innerHTML = store[7].intro;
     document.getElementById('store_website').innerHTML = store[7].website;
     document.getElementById('comments').innerHTML = store[7].comments;
+    getMap(store[7].searchName);
     
     if (Number(window.screen.availWidth) < 821){
         document.getElementById('modal_container').style.display="inline-block";
@@ -210,3 +225,102 @@ document.getElementById('modal_button').addEventListener("click", function(){
     document.getElementById('modal_container').style.display="none";
     document.getElementById('modal').style.display="none";
 });
+
+let map;
+let service;
+let queryLocation = "京都市";
+let placeId;
+let place;
+let nowDate = new Date();
+
+async function initMap() {
+
+  const kyoto = new google.maps.LatLng(35.0042, 135.4605);
+  map = new google.maps.Map(document.getElementById("largemap"), {
+    center: kyoto,
+    zoom: 15,
+  });
+
+  const request = {
+    query: queryLocation,
+    fields: ["name", "geometry", "place_id"],
+  };
+
+  service = new google.maps.places.PlacesService(map);
+  service.findPlaceFromQuery(request, (results, status) => {
+    if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+      for (let i = 0; i < results.length; i++) {   
+        createMarker(results[i]);
+        if(results[i].place_id){
+            getPlaceDetails(service, results[i].place_id);
+        }
+      }
+      map.setCenter(results[0].geometry.location);
+    }
+  });
+
+}
+
+function createMarker(place) {
+  if (!place.geometry || !place.geometry.location) return;
+  const marker = new google.maps.Marker({
+    map,
+    position: place.geometry.location,
+  });
+}
+
+window.initMap = initMap;
+
+async function getMap(searchName) {
+    queryLocation = searchName;
+    await initMap();
+    document.getElementsByClassName('google_map')[0].style.display = 'block';
+    document.getElementsByClassName('google_basic_info')[0].style.display = 'grid';
+}
+
+function getPlaceDetails(service, placeId) {
+    service.getDetails({ placeId: placeId }, (place, status) => {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+            if(place.types.includes("food", "restaurant")){
+                console.log(place.opening_hours.periods);
+                let weekday = handleWeekDay(nowDate.getDay());
+                let openingStr = "";
+                let basicPeriods = place.opening_hours.periods[weekday];
+                let additionPeriods = "";
+                if(basicPeriods){
+                    openingStr += basicPeriods.open.time + "~" + basicPeriods.close.time;
+                    if(weekday===6){
+                        weekday = 0;
+                        additionPeriods = place.opening_hours.periods[1];
+                    } else {
+                        additionPeriods = place.opening_hours.periods[weekday + 1];
+                    }
+                    if (additionPeriods && additionPeriods.open.day === weekday) {
+                        openingStr += " ; " + additionPeriods.open.time + "~" + additionPeriods.close.time;
+                    }
+                } else{
+                    openingStr += "Closed";
+                }
+                let priceStr = "";
+                if(place.price_level){
+                    for(let i = 0; i < place.price_level; i++){
+                        priceStr += "$";
+                    }
+                } else {
+                    priceStr += "No Information";
+                }
+                document.getElementById('openinghours').innerHTML = openingStr;
+                document.getElementById('rating').innerHTML = place.rating + " / 5";
+                document.getElementById('pricelevel').innerHTML = priceStr;
+            }
+        }
+    });
+}
+
+function handleWeekDay(weekDay) {
+    if (weekDay == 0){
+        return 6;
+    } else{
+        return weekDay - 1;
+    }
+}
