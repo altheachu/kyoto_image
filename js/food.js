@@ -282,33 +282,11 @@ function getPlaceDetails(service, placeId) {
     service.getDetails({ placeId: placeId }, (place, status) => {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             if(place.types.includes("food", "restaurant")){
-                console.log(place.opening_hours.periods);
+
                 let weekday = handleWeekDay(nowDate.getDay());
-                let openingStr = "";
-                let basicPeriods = place.opening_hours.periods[weekday];
-                let additionPeriods = "";
-                if(basicPeriods){
-                    openingStr += basicPeriods.open.time + "~" + basicPeriods.close.time;
-                    if(weekday===6){
-                        weekday = 0;
-                        additionPeriods = place.opening_hours.periods[1];
-                    } else {
-                        additionPeriods = place.opening_hours.periods[weekday + 1];
-                    }
-                    if (additionPeriods && additionPeriods.open.day === weekday) {
-                        openingStr += " ; " + additionPeriods.open.time + "~" + additionPeriods.close.time;
-                    }
-                } else{
-                    openingStr += "Closed";
-                }
-                let priceStr = "";
-                if(place.price_level){
-                    for(let i = 0; i < place.price_level; i++){
-                        priceStr += "$";
-                    }
-                } else {
-                    priceStr += "No Information";
-                }
+                let openingStr = getOpeningStr(weekday, place);
+                let priceStr = getPriceStr(place);
+
                 document.getElementById('openinghours').innerHTML = openingStr;
                 document.getElementById('rating').innerHTML = place.rating + " / 5";
                 document.getElementById('pricelevel').innerHTML = priceStr;
@@ -323,4 +301,37 @@ function handleWeekDay(weekDay) {
     } else{
         return weekDay - 1;
     }
+}
+
+function getOpeningStr(weekday, place) {
+    let basicPeriods = place.opening_hours.periods[weekday];
+    let openingStr = "";
+    if(basicPeriods){
+        let additionPeriods = "";
+        openingStr += basicPeriods.open.time + " ~ " + basicPeriods.close.time;
+        if(weekday===6){
+            weekday = 0;
+            additionPeriods = place.opening_hours.periods[1];
+        } else {
+            additionPeriods = place.opening_hours.periods[weekday + 1];
+        }
+        if (additionPeriods && additionPeriods.open.day === weekday) {
+            openingStr += " ; " + additionPeriods.open.time + " ~ " + additionPeriods.close.time;
+        }
+    } else{
+        openingStr += "Closed";
+    }
+    return openingStr;
+}
+
+function getPriceStr(place) {
+    let priceStr = "";
+    if(place.price_level){
+        for(let i = 0; i < place.price_level; i++){
+            priceStr += "$";
+        }
+    } else {
+        priceStr += "No Information";
+    }
+    return priceStr;
 }
