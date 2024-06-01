@@ -163,6 +163,32 @@
     font-family: "calibri";
 }
 
+#modal_details{
+    grid-column-start: 2; 
+    grid-column-end: 3; 
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    line-height: 2;
+    color: #51484f ;
+    font-family: "calibri";
+    display: block;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#modal_map{
+    grid-column-start: 1; 
+    grid-column-end: 2; 
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    line-height: 2;
+    color: #51484f ;
+    font-family: "calibri";
+    display: none;
+}
+
 #modal_close_area{
     margin-top: 1rem;
     display: flex;

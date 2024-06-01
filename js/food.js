@@ -227,7 +227,9 @@ document.getElementById('modal_button').addEventListener("click", function(){
 });
 
 let map;
+let smap;
 let service;
+let sService;
 let queryLocation = "京都市";
 let placeId;
 let place;
@@ -236,37 +238,62 @@ let nowDate = new Date();
 async function initMap() {
 
   const kyoto = new google.maps.LatLng(35.0042, 135.4605);
-  map = new google.maps.Map(document.getElementById("largemap"), {
-    center: kyoto,
-    zoom: 15,
-  });
-
   const request = {
     query: queryLocation,
     fields: ["name", "geometry", "place_id"],
   };
 
-  service = new google.maps.places.PlacesService(map);
-  service.findPlaceFromQuery(request, (results, status) => {
-    if (status === google.maps.places.PlacesServiceStatus.OK && results) {
-      for (let i = 0; i < results.length; i++) {   
-        createMarker(results[i]);
-        if(results[i].place_id){
-            getPlaceDetails(service, results[i].place_id);
+  if (Number(window.screen.availWidth) >= 821){
+    map = new google.maps.Map(document.getElementById("largemap"), {
+        center: kyoto,
+        zoom: 15,
+    });
+    service = new google.maps.places.PlacesService(map);
+    service.findPlaceFromQuery(request, (results, status) => {
+        if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+          for (let i = 0; i < results.length; i++) {   
+            createMarker(results[i]);
+            if(results[i].place_id){
+                getPlaceDetails(service, results[i].place_id);
+            }
+          }
+          map.setCenter(results[0].geometry.location);
         }
-      }
-      map.setCenter(results[0].geometry.location);
-    }
-  });
+    });
 
+  } else {
+    smap = new google.maps.Map(document.getElementById("modal_map"), {
+        center: kyoto,
+        zoom: 15,
+    });
+    sService = new google.maps.places.PlacesService(smap);
+    sService.findPlaceFromQuery(request, (results, status) => {
+        if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+            for (let i = 0; i < results.length; i++) {   
+                createMarker(results[i]);
+                if(results[i].place_id){
+                    getPlaceDetails(sService, results[i].place_id);
+                }
+            }
+            smap.setCenter(results[0].geometry.location);
+        }
+    });
+  }
 }
 
 function createMarker(place) {
   if (!place.geometry || !place.geometry.location) return;
-  const marker = new google.maps.Marker({
-    map,
-    position: place.geometry.location,
-  });
+  if (Number(window.screen.availWidth) >= 821){
+    const marker = new google.maps.Marker({
+        map,
+        position: place.geometry.location,
+    });
+  } else{
+    const smarker = new google.maps.Marker({
+        smap,
+        position: place.geometry.location,
+    });
+  }
 }
 
 window.initMap = initMap;
@@ -275,7 +302,9 @@ async function getMap(searchName) {
     queryLocation = searchName;
     await initMap();
     document.getElementsByClassName('google_map')[0].style.display = 'block';
+    document.getElementById('modal_map').style.display = 'block';
     document.getElementsByClassName('google_basic_info')[0].style.display = 'grid';
+    document.getElementById('modal_details').style.display = 'grid';
 }
 
 function getPlaceDetails(service, placeId) {
@@ -287,9 +316,15 @@ function getPlaceDetails(service, placeId) {
                 let openingStr = getOpeningStr(weekday, place);
                 let priceStr = getPriceStr(place);
 
-                document.getElementById('openinghours').innerHTML = openingStr;
-                document.getElementById('rating').innerHTML = place.rating + " / 5";
-                document.getElementById('pricelevel').innerHTML = priceStr;
+                if (Number(window.screen.availWidth) >= 821){
+                    document.getElementById('openinghours').innerHTML = openingStr;
+                    document.getElementById('rating').innerHTML = place.rating + " / 5";
+                    document.getElementById('pricelevel').innerHTML = priceStr;
+                } else {
+                    document.getElementById('modal_opening_hours').innerHTML = openingStr;
+                    document.getElementById('modal_rating').innerHTML = place.rating + " / 5";
+                    document.getElementById('modal_pricelevel').innerHTML = priceStr;
+                }
             }
         }
     });
